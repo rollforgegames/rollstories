@@ -50,7 +50,7 @@ function MainMenu({ onSelectStory }) {
               onClick={() => setLanguage(lang)}
             >
               <span className={`fi ${LANGUAGE_INFO[lang].flag}`}></span>
-              {LANGUAGE_INFO[lang].label}
+              <span className="lang-label">{LANGUAGE_INFO[lang].label}</span>
             </button>
           ))}
         </div>

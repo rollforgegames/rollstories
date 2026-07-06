@@ -69,3 +69,8 @@ button:hover {
   background: var(--color-accent);
   color: #0d0d0f;
 }
+
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+}

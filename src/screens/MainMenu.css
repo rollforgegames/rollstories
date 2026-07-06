@@ -33,6 +33,14 @@
   letter-spacing: 0.05em;
 }
 
+.language-selector {
+  min-width: 0;
+}
+
+.language-selector {
+  flex-wrap: wrap;
+}
+
 .navbar-logo:hover img {
   opacity: 0.8;
 }
@@ -312,6 +320,18 @@
 
   .main-menu-bg.visible {
     opacity: 1;
+  }
+
+  .lang-label {
+    display: none;
+  }
+
+  .language-selector button {
+    padding: 0.4rem 0.6rem;
+  }
+
+  .language-selector {
+    gap: 0.4rem;
   }
 }
 
