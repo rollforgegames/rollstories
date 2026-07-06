@@ -76,17 +76,23 @@ export default {
       title: 'El Tesoro del Monarca',
       description: 'Un robo en la cámara del tesoro ha sacudido la ciudad. ¿Quién se atrevió a ejecutar un golpe que parecía imposible?',
     },
+    'vampire-masquerade': {
+      title: 'Vampire: The Masquerade',
+      description: 'Una historia de intrigas nocturnas y política de sangre.',
+    },
   },
 
   systems: {
     dnd: 'Dungeons & Dragons',
-    vampire: 'Vampiro: La Mascarada',
+    vampire: 'Vampire: The Masquerade',
     cyberpunk: 'Cyberpunk',
-    cthulhu: 'La Llamada de Cthulhu',
+    cthulhu: 'The Call of Cthulhu',
   },
+  
   common: {
     newGame: 'Nueva Partida',
     continueGame: 'Continuar',
+    comingSoon: 'En desarrollo',
   },
 
   characterCreation: {
@@ -194,11 +200,13 @@ export default {
     rollOf: 'Tirada de',
     combatLabel: 'Combate',
     targetLabel: 'Objetivo',
+    creditsAuthor: 'Historia original por',
+    creditsTranslator: 'Traducción al ruso por',
   },
 
   modifiers: {
-  race: 'raza',
-  class: 'clase',
-},
+    race: 'raza',
+    class: 'clase',
+  },
 
 };

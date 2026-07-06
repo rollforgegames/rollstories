@@ -108,6 +108,10 @@ export default {
       title: "The Monarch's Treasure",
       description: 'A theft in the royal treasury has shaken the city. Who dared to pull off a seemingly impossible heist?',
     },
+    'vampire-masquerade': {
+      title: 'Vampire: The Masquerade',
+      description: 'A story of nocturnal intrigue and blood politics.',
+    },
   },
   systems: {
     dnd: 'Dungeons & Dragons',
@@ -118,6 +122,7 @@ export default {
   common: {
     newGame: 'New Game',
     continueGame: 'Continue',
+    comingSoon: 'In development',
   },
   characterCreation: {
     title: 'Create your character',
@@ -156,11 +161,13 @@ export default {
     rollOf: 'Roll of',
     combatLabel: 'Combat',
     targetLabel: 'Target',
+    creditsAuthor: 'Original story by',
+    creditsTranslator: 'Russian translation by',
   },
 
   modifiers: {
-  race: 'race',
-  class: 'class',
-},
+    race: 'race',
+    class: 'class',
+  },
 
 };

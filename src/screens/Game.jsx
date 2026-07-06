@@ -12,6 +12,7 @@ import NodeRoll from '../components/game/NodeRoll';
 import NodeCombat from '../components/game/NodeCombat';
 import CharacterPortrait from '../components/game/CharacterPortrait';
 import './Game.css';
+import { GNOMABANDISTAS_CREDITS } from '../data/systems/dnd/stories/gnomabandistas_credits';
 
 const STORY_NODES = {
   gnomabandistas: GNOMABANDISTAS_NODES,
@@ -24,6 +25,9 @@ function Game() {
 
   const nodes = STORY_NODES[selectedStory.id];
   const node = nodes[currentNodeId];
+  const STORY_CREDITS = {
+    gnomabandistas: GNOMABANDISTAS_CREDITS,
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -95,7 +99,16 @@ function Game() {
 
       <div className="game-ui">
         {node.type === 'narration' && (
-          <NodeNarration key={node.id} node={node} character={character} flags={flags} resolvedText={resolveText(node)} onNext={() => goToNode(node.next)} />
+          <NodeNarration
+            key={node.id}
+            node={node}
+            character={character}
+            flags={flags}
+            resolvedText={resolveText(node)}
+            onNext={() => goToNode(node.next)}
+            credits={STORY_CREDITS[selectedStory.id]}
+            language={language}
+          />
         )}
         {node.type === 'choice' && (
           <NodeChoice key={node.id} node={node} character={character} flags={flags} resolvedText={resolveText(node)} resolvedChoices={resolveChoices(node)} onChoice={(next) => goToNode(next)} />

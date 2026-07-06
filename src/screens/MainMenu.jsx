@@ -60,38 +60,46 @@ function MainMenu({ onSelectStory }) {
         {STORY_LIST.map((story) => (
           <div
             key={story.id}
-            className={`story-card theme-${story.theme} ${expandedStoryId === story.id ? 'expanded' : ''}`}
+            className={`story-card theme-${story.theme} ${expandedStoryId === story.id ? 'expanded' : ''} ${story.comingSoon ? 'coming-soon' : ''}`}
             onClick={() => toggleExpand(story.id)}
             style={expandedStoryId === story.id ? THEMES[story.theme] : {}}
           >
             <div className="story-card-face">
               <p className="system">{t(`systems.${story.system}`)}</p>
-              <span className="duration">{story.duration} min</span>
+              {story.comingSoon ? (
+                <span className="duration coming-soon-label">{t('common.comingSoon')}</span>
+              ) : (
+                <span className="duration">{story.duration} min</span>
+              )}
             </div>
 
             <div className="story-card-overlay">
               <h2>{t(`stories.${story.id}.title`)}</h2>
               <p className="description">{t(`stories.${story.id}.description`)}</p>
-              <div className="story-card-actions">
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectStory(story, 'new');
-                  }}
-                >
-                  {t('common.newGame')}
-                </button>
-                {hasSavedGame(story.id) && (
+              {story.comingSoon ? (
+                <p className="coming-soon-note">{t('common.comingSoon')}</p>
+              ) : (
+                <div className="story-card-actions">
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      onSelectStory(story, 'continue');
+                      onSelectStory(story, 'new');
                     }}
                   >
-                    {t('common.continueGame')}
+                    {t('common.newGame')}
                   </button>
-                )}
-              </div>
+                  {hasSavedGame(story.id) && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectStory(story, 'continue');
+                      }}
+                    >
+                      {t('common.continueGame')}
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ))}

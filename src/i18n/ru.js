@@ -108,16 +108,21 @@ export default {
       title: 'Сокровище Монарха',
       description: 'Кража в королевской казне потрясла город. Кто осмелился совершить, казалось бы, невозможное?',
     },
+    'vampire-masquerade': {
+      title: 'Вампир: Маскарад',
+      description: 'История ночных интриг и кровавой политики.',
+    },
   },
   systems: {
     dnd: 'Dungeons & Dragons',
-    vampire: 'Вампир: Маскарад',
-    cyberpunk: 'Киберпанк',
-    cthulhu: 'Зов Ктулху',
+    vampire: 'Vampire: The Masquerade',
+    cyberpunk: 'Cyberpunk',
+    cthulhu: 'The Call of Cthulhu',
   },
   common: {
     newGame: 'Новая игра',
     continueGame: 'Продолжить',
+    comingSoon: 'В разработке',
   },
   characterCreation: {
     title: 'Создайте персонажа',
@@ -156,11 +161,13 @@ export default {
     rollOf: 'Бросок на',
     combatLabel: 'Бой',
     targetLabel: 'Цель',
+    creditsAuthor: 'Оригинальная история:',
+    creditsTranslator: 'Перевод на русский:',
   },
 
   modifiers: {
-  race: 'раса',
-  class: 'класс',
-},
+    race: 'раса',
+    class: 'класс',
+  },
 
 };

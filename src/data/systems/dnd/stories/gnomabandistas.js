@@ -73,7 +73,7 @@ El suelo de piedra no muestra marcas de arrastre. Las paredes no tienen daños. 
       modifier: () => 0,
       outcomes: [
         { min: 12, next: 'camara_exito' },
-        { min: 0, next: 'camara_fallo' },
+        { min: -Infinity, next: 'camara_fallo' },
       ],
     },
   },
@@ -123,7 +123,7 @@ O no hay nada que encontrar, o estás buscando en los sitios equivocados. La sen
       outcomes: [
         { min: 14, next: 'guardia_exito' },
         { min: 10, next: 'guardia_fallo' },
-        { min: 0, next: 'guardia_tension' },
+        { min: -Infinity, next: 'guardia_tension' },
       ],
     },
   },
@@ -177,7 +177,7 @@ Los pasos llegan rápido. Demasiado rápido para ser una coincidencia: estaban c
       modifier: () => 0,
       outcomes: [
         { min: 10, next: 'guardia_combate_victoria' },
-        { min: 0, next: 'camino_acusacion' },
+        { min: -Infinity, next: 'camino_acusacion' },
       ],
     },
   },
@@ -305,7 +305,7 @@ Te quedas quieto. Observas.`,
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'puerto_sigilo_exito' },
-        { min: 0, next: 'puerto_combate' },
+        { min: -Infinity, next: 'puerto_combate' },
       ],
     },
   },
@@ -339,7 +339,7 @@ Te acercas cuando el camino está despejado. En la pared, a la altura de la rodi
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'puerto_combate_victoria' },
-        { min: 0, next: 'puerto_capturado' },
+        { min: -Infinity, next: 'puerto_capturado' },
       ],
     },
   },
@@ -391,7 +391,7 @@ Te plantas ante la barra y preguntas lo suficientemente alto como para que quien
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'puerto_preguntar_exito' },
-        { min: 0, next: 'puerto_preguntar_fallo' },
+        { min: -Infinity, next: 'puerto_preguntar_fallo' },
       ],
     },
   },
@@ -484,7 +484,7 @@ El sonido de voces llega antes de que veas ninguna luz. Alguien discute en algú
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'escondite_sigilo_exito' },
-        { min: 0, next: 'escondite_combate_gnomos' },
+        { min: -Infinity, next: 'escondite_combate_gnomos' },
       ],
     },
   },
@@ -554,7 +554,7 @@ Molibdeno lanza lo primero que tiene a mano, que resulta ser un artilugio que ex
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'encuentro_dabiz' },
-        { min: 0, next: 'camino_acusacion' },
+        { min: -Infinity, next: 'camino_acusacion' },
       ],
     },
   },
@@ -573,7 +573,7 @@ La idea de hacerlo de forma ordenada dura exactamente hasta que Molibdeno ve las
       modifier: () => 3,
       outcomes: [
         { min: 8, next: 'encuentro_dabiz_capitan' },
-        { min: 0, next: 'camino_acusacion' },
+        { min: -Infinity, next: 'camino_acusacion' },
       ],
     },
   },
@@ -592,7 +592,7 @@ Los tres que hay dentro tardan exactamente un segundo en procesar lo que está p
       modifier: () => 0,
       outcomes: [
         { min: 11, next: 'encuentro_dabiz' },
-        { min: 0, next: 'camino_acusacion' },
+        { min: -Infinity, next: 'camino_acusacion' },
       ],
     },
   },
@@ -665,7 +665,7 @@ Esto no es el registro de un golpe. Es el archivo operativo de alguien que lleva
       outcomes: [
         { min: 14, next: 'final_bueno' },
         { min: 10, next: 'final_neutral' },
-        { min: 0, next: 'final_malo_1' },
+        { min: -Infinity, next: 'final_malo_1' },
       ],
     },
   },
@@ -691,7 +691,7 @@ Al fondo de la sala, DaBiZ ha empezado a murmurar. Las palabras son en un idioma
       outcomes: [
         { min: 14, next: 'final_bueno' },
         { min: 10, next: 'final_neutral' },
-        { min: 0, next: 'final_malo_1' },
+        { min: -Infinity, next: 'final_malo_1' },
       ],
     },
   },
@@ -728,7 +728,7 @@ Las calles se estrechan a tu alrededor. Cada esquina puede tener alguien esperan
       outcomes: [
         { min: 14, next: 'final_malo_2_escape' },
         { min: 8, next: 'final_malo_2_arrestado' },
-        { min: 0, next: 'final_malo_2_muerte' },
+        { min: -Infinity, next: 'final_malo_2_muerte' },
       ],
     },
   },
